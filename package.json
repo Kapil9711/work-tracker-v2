@@ -1,0 +1,40 @@
+{
+  "name": "work-tracker",
+  "version": "1.0.0",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently cross-env NODE_ENV=development \"npm run server\" \"npm run client\"",
+    "prod": "concurrently cross-env NODE_ENV=production \"npm run server\" \"npm run client\"",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "buffer": "^6.0.3",
+    "concurrently": "^9.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.12",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.14",
+    "safe-buffer": "^5.2.1",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "ejs": "^3.1.10",
+    "nodemon": "^3.1.4"
+  }
+}
